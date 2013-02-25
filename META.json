@@ -59,7 +59,7 @@
    "provides" : {
       "Term::Spark" : {
          "file" : "lib/Term/Spark.pm",
-         "version" : "0.001"
+         "version" : "0.01"
       }
    },
    "release_status" : "stable",
@@ -74,5 +74,6 @@
          "web" : "https://github.com/LuRsT/term-spark"
       }
    },
-   "version" : "0.001"
+   "version" : "0.01"
 }
+
