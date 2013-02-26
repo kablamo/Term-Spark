@@ -37,8 +37,6 @@ sub show_graph {
 
 1;
 __END__
-=encoding utf-8
-
 =head1 NAME
 
 Term::Spark - Perl extension for dispaying bars in the terminal
@@ -51,6 +49,29 @@ Displays beautiful graphs to use in the terminal
 
 =head2 METHODS
 
+Returns a string with a single utf8 bar according to the value
+
+    Term::Spark::show_bar($value_for_this_bar, $max_value);
+
+Returns a string with a bunch of utf8 bars according to the values
+
+    Term::Spark::show_graph('max' => $max_value, 'values' => \@values);
+
+Example:
+
+    A script to capture args or STDIN and print a graph:
+
+    use Term::Spark;
+
+    chomp( @ARGV = <STDIN> ) unless @ARGV;
+
+    my @list = sort { $a <=> $b } @ARGV;
+
+    print Term::Spark::show_graph(
+        'max'     => $list[-1],
+        'values'  => \@ARGV,
+    );
+
 =head1 SEE ALSO
 
-Vertical mode: https://github.com/LuRsT/vspark
+Original idea: https://github.com/holman/spark
