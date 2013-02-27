@@ -3,6 +3,10 @@ package Term::Spark;
 use strict;
 use warnings;
 
+use Sub::Exporter -setup => {
+    'exports' => [ 'show_bar', 'show_graph' ],
+};
+
 our @ISA = qw();
 
 # VERSION
