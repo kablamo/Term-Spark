@@ -1,7 +1,12 @@
 use Term::Spark qw{ show_graph };
 
+use strict;
+use warnings;
+
 # VERSION
 # PODNAME: show_graph
+
+binmode STDOUT, ':encoding(UTF-8)';
 
 chomp( @ARGV = <STDIN> ) unless @ARGV;
 
