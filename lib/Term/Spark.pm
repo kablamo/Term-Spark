@@ -2,6 +2,7 @@ package Term::Spark;
 
 use strict;
 use warnings;
+use utf8;
 
 use Sub::Exporter -setup => {
     'exports' => [ 'show_bar', 'show_graph' ],
