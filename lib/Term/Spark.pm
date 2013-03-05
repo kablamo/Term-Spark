@@ -18,9 +18,9 @@ sub show_bar {
 
     my @graph  = qw{ ▁ ▂ ▃ ▄ ▅ ▆ ▇ █ };
 
-    my $index = ( $num * ( scalar( @graph ) - 1 ) ) / $max;
+    my $index = ( $num * ( scalar( @graph ) - 1 )  ) / $max;
 
-    return $graph[ $index ];
+    return $graph[ int $index ];
 }
 
 sub show_graph {
