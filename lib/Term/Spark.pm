@@ -20,7 +20,7 @@ sub show_bar {
 
     my $index = ( $num * ( scalar( @graph ) - 1 ) ) / $max;
 
-    return $graph[ $index -1 ];
+    return $graph[ $index ];
 }
 
 sub show_graph {
