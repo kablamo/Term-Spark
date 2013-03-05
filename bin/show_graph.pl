@@ -1,3 +1,5 @@
+#!/usr/bin/env perl
+
 use Term::Spark qw{ show_graph };
 
 use strict;
@@ -15,4 +17,4 @@ my @list = sort { $a <=> $b } @ARGV;
 print show_graph(
     'max'     => $list[-1],
     'values'  => \@ARGV,
-);
+), "\n";
