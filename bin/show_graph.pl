@@ -1,3 +1,5 @@
+#!/usr/bin/env perl
+
 use Term::Spark qw{ show_graph };
 
 use strict;
