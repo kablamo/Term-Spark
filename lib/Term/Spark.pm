@@ -39,41 +39,41 @@ sub show_graph {
 
 1;
 __END__
-=head1 NAME
-
-Term::Spark - Perl extension for dispaying bars in the terminal
 
 =head1 SYNOPSIS
 
-Displays beautiful graphs to use in the terminal
+    use Term::Spark qw/show_graph/;
+    binmode STDOUT, ':encoding(UTF-8)'; 
+    print show_graph(
+        values  => [7,3,6,9,0,1,3,5],
+        max     => 7,
+    );
+
+    # The output looks like this:
+    ▆▃▅█▁▁▃▄
+
 
 =head1 DESCRIPTION
 
-=head2 METHODS
+This module displays sparklines in the terminal.
 
-Returns a string with a single utf8 bar according to the value
+Note that because the sparklines are built from utf8 characters, users must
+setup UTF-8 encoding for STDOUT if they wish to print the output.  
 
-    Term::Spark::show_bar($value_for_this_bar, $max_value);
+=head1 METHODS
 
-Returns a string with a bunch of utf8 bars according to the values
+=head2 show_graph(values => \@values, max => $max)
 
-    Term::Spark::show_graph('max' => $max_value, 'values' => \@values);
+This method builds a sparklines graph and returns it as a string.
 
-Example:
+The 'values' parameter should be a list of numbers.  
 
-    A script to capture args or STDIN and print a graph:
-
-    use Term::Spark;
-
-    chomp( @ARGV = <STDIN> ) unless @ARGV;
-
-    my @list = sort { $a <=> $b } @ARGV;
-
-    print Term::Spark::show_graph(
-        'max'     => $list[-1],
-        'values'  => \@ARGV,
-    );
+The 'max' parameter is the maximum value of the graph.  Without this parameter
+you cannot compare graphs because the scaling will change depending on the
+data.  This parameter is optional.
 
 =head1 SEE ALSO
 
-Original idea: https://github.com/holman/spark
+L<Term::Vspark> - "vertical" sparklines
+
+Original implementation: L<https://github.com/holman/spark>
