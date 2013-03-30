@@ -11,6 +11,7 @@ use Sub::Exporter -setup => {
 our @ISA = qw();
 
 # VERSION
+# ABSTRACT: Perl extension for dispaying bars in the terminal
 
 sub show_bar {
     my $num = shift;

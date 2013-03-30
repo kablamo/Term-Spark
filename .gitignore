@@ -3,3 +3,4 @@ blib/
 Makefile
 MYMETA*
 .build/
+.mailmap
