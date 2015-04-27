@@ -1,0 +1,3 @@
+name = "Term-Spark"
+badges = ["travis", "coveralls"]
+license = "perl_5"

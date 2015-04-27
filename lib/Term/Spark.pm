@@ -4,14 +4,9 @@ use strict;
 use warnings;
 use utf8;
 
-use Sub::Exporter -setup => {
-    'exports' => [ 'show_bar', 'show_graph' ],
-};
+use Exporter::Shiny qw/show_bar show_graph/;
 
-our @ISA = qw();
-
-# VERSION
-# ABSTRACT: Perl extension for dispaying bars in the terminal
+our $VERSION = 0.26;
 
 sub show_bar {
     my $num = shift;
@@ -41,6 +36,12 @@ sub show_graph {
 1;
 __END__
 
+=encoding utf-8
+
+=head1 NAME
+
+Term::Spark - Display sparklines in the terminal
+
 =head1 SYNOPSIS
 
     use Term::Spark qw/show_graph/;
@@ -58,9 +59,6 @@ __END__
 
 This module displays sparklines in the terminal.
 
-Note that because the sparklines are built from utf8 characters, users must
-setup UTF-8 encoding for STDOUT if they wish to print the output.  
-
 =head1 METHODS
 
 =head2 show_graph(values => \@values, max => $max)
@@ -72,6 +70,12 @@ The 'values' parameter should be a list of numbers.
 The 'max' parameter is the maximum value of the graph.  Without this parameter
 you cannot compare graphs because the scaling will change depending on the
 data.  This parameter is optional.
+
+=head1 AUTHOR
+
+Gil Gonçalves <lurst@cpan.org> (original author)
+
+Eric Johnson (kablamo)
 
 =head1 SEE ALSO
 

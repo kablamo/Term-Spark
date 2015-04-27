@@ -1,0 +1,6 @@
+Revision history for Term::Spark.
+
+{{$NEXT}}
+    - Switched to Minilla
+    - Added tests
+    - Updates to documentation

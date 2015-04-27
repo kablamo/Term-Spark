@@ -1,6 +1,6 @@
 Term-Spark-*
 blib/
+local/
 Makefile
 MYMETA*
-.build/
-.mailmap
+.build

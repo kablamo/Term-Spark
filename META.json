@@ -1,10 +1,10 @@
 {
-   "abstract" : "Perl extension for dispaying bars in the terminal",
+   "abstract" : "Display sparklines in the terminal",
    "author" : [
-      "Gil Gon\u00c3\u00a7alves <lurst@cpan.org>"
+      "Gil Gonçalves <lurst@cpan.org> (original author)"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Minilla/v2.2.0, CPAN::Meta::Converter version 2.142060",
    "license" : [
       "perl_5"
    ],
@@ -17,69 +17,55 @@
       "directory" : [
          "t",
          "xt",
+         "inc",
+         "share",
+         "eg",
          "examples",
-         "corpus"
-      ],
-      "package" : [
-         "DB"
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "Module::Build" : "0.38"
          }
       },
       "develop" : {
          "requires" : {
-            "Pod::Coverage::TrustPod" : "0",
             "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
             "Test::Pod" : "1.41",
-            "Test::Pod::Coverage" : "1.08"
+            "Test::Spellunker" : "v0.2.7"
          }
       },
       "runtime" : {
          "requires" : {
-            "Sub::Exporter" : "0",
-            "perl" : "5.008",
-            "strict" : "0",
-            "utf8" : "0",
-            "warnings" : "0"
+            "Exporter::Shiny" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0",
-            "File::Find" : "0",
-            "File::Spec::Functions" : "0",
-            "File::Temp" : "0",
-            "List::Util" : "0",
-            "Test::More" : "0"
+            "Test::Most" : "0"
          }
       }
    },
-   "provides" : {
-      "Term::Spark" : {
-         "file" : "lib/Term/Spark.pm",
-         "version" : "0.50"
-      }
-   },
-   "release_status" : "stable",
+   "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/LuRsT/term-spark/issues"
+         "web" : "https://github.com/kablamo/Term-Spark/issues"
       },
-      "homepage" : "https://metacpan.org/release/Term-Spark",
+      "homepage" : "https://github.com/kablamo/Term-Spark",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/LuRsT/term-spark.git",
-         "web" : "https://github.com/LuRsT/term-spark"
+         "url" : "git://github.com/kablamo/Term-Spark.git",
+         "web" : "https://github.com/kablamo/Term-Spark"
       }
    },
-   "version" : "0.50",
+   "version" : "0.26",
    "x_contributors" : [
       "Eric Johnson <eric.git@iijo.org>",
-      "Gil Gon\u00c3\u00a7alves <lursty@gmail.com>"
+      "Gilberto Gonçalves <lursty@gmail.com>"
    ]
 }
-
